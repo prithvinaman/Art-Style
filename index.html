@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrishArt - AI Art Companion with Gemini 2.0 Flash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>PrishArt</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero">
+                <div class="hero-content">
+                    <h2>Your Creative Companion</h2>
+                    <p>Get AI feedback on your art and learn how to improve it.</p>
+                    <button id="start-btn" class="btn primary-btn">Start Creating</button>
+                </div>
+                <div class="hero-image">
+                    <div class="rotating-art">
+                        <div class="particles">
+                            <div class="particle p1"></div>
+                            <div class="particle p2"></div>
+                            <div class="particle p3"></div>
+                            <div class="particle p4"></div>
+                            <div class="particle p5"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Art Analysis</h3>
+                    <p>Upload your artwork and receive detailed feedback on composition, color balance, lighting, and style.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Art Chat</h3>
+                    <p>Ask questions about art techniques, history, or get personalized guidance for your creative journey.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Improve Skills</h3>
+                    <p>Learn how to enhance your artistic abilities with personalized suggestions and resources.</p>
+                </div>
+            </section>
+
+            <section id="chat-section" class="hidden">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h3>Chat with PrishArt</h3>
+                        <button id="upload-btn" class="btn secondary-btn">Upload Artwork</button>
+                        <input type="file" id="art-upload" accept="image/*" hidden>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot">
+                            <div class="message-content">
+                                Hello! I'm your artistic companion. Upload your artwork for analysis or ask me any art-related questions.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <textarea id="user-input" placeholder="Type your message here..."></textarea>
+                        <button id="send-btn" class="btn primary-btn">Send</button>
+                    </div>
+                </div>
+                <div class="preview-container hidden" id="preview-container">
+                    <div class="preview-header">
+                        <h3>Your Artwork</h3>
+                        <button id="close-preview" class="btn text-btn">×</button>
+                    </div>
+                    <div class="preview-image">
+                        <img id="preview-img" src="" alt="Preview of uploaded artwork">
+                    </div>
+                    <button id="analyze-btn" class="btn primary-btn">Analyze Artwork</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 PrishArt. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
